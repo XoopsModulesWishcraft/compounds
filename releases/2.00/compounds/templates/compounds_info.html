@@ -1,0 +1,46 @@
+<div style="display:block; clear:both; font-size:16px; text-align:center;"><{$chemical.symbol}></div>
+<h1>Details</h1>
+<div style="display:block; clear:both;">
+<div style="float:right;"><a href="<{$xoops_url}>/modules/compounds/vote.php?id=<{$chemical.id}>"><img border="0" src="<{$xoops_url}>/modules/compounds/images/votebutton_small.png"></a></div>
+<div style="display:block; clear:left; float:left; font-size:12px; text-align:justify;">Views: <{$chemical.views}></div>
+<div style="display:block; clear:left; float:left; font-size:12px; text-align:justify;">View Runners: <{$chemical.runners}></div>
+<div style="display:block; clear:left; float:left; font-size:12px; text-align:justify;">Vote Percentile: <{$chemical.stars}>%</div>
+</div>
+<{if $chemical.hyposise}>
+<h1>Hyposise</h1>
+<div style="display:block; clear:both; font-size:12px; text-align:justify;"><{$chemical.hyposise}></div>
+<{/if}>
+<{if $chemical.process}>
+<h1>Process</h1>
+<div style="display:block; clear:both; font-size:12px; text-align:justify;"><{$chemical.process}></div>
+<{/if}>
+<{if $chemical.synopisise}>
+<h1>Synopisise</h1>
+<div style="display:block; clear:both; font-size:12px; text-align:justify;"><{$chemical.synopisise}></div>
+<{/if}>
+<h2>Defined By:: <a href="<{$user.profile_url}>"><{$user.uname}></a></h2>
+<{if $user.views}>
+<div style="display:block; clear:both; font-size:12px; text-align:left;">Views: <a href="<{$user.profile_url}>"><{$user.views}></a></div>
+<{/if}>
+<{if $user.runners}>
+<div style="display:block; clear:both; font-size:12px; text-align:left;">View Runners: <a href="<{$user.profile_url}>"><{$user.runners}></a></div>
+<{/if}>
+<{if $user.stars}>
+<div style="display:block; clear:both; font-size:12px; text-align:left;">Vote: <a href="<{$user.profile_url}>"><{$user.stars}>%</a></div>
+<{/if}>
+<{if $user.name}>
+<div style="display:block; clear:both; font-size:12px; text-align:left;">Name: <a href="<{$user.profile_url}>"><{$user.name}></a></div>
+<{/if}>
+<{if $user.url}>
+<div style="display:block; clear:both; font-size:12px; text-align:left;">URL: <a href="<{$user.url}>"><{$user.url}></a></div>
+<{/if}>
+<div style="text-align: center; padding: 3px;
+margin:3px;"> <{$commentsnav}> <{$lang_notice}></div>
+<div style="margin:3px; padding: 3px;"> 
+<!-- start comments loop -->
+<{if $comment_mode == "flat"}> <{include file="db:system_comments_flat.html"}> 
+<{elseif $comment_mode == "thread"}> <{include file="db:system_comments_thread.html"}> 
+<{elseif $comment_mode == "nest"}> <{include file="db:system_comments_nest.html"}> 
+<{/if}> 
+<!-- end comments loop -->
+</div>
