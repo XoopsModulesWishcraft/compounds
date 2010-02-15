@@ -1,0 +1,16 @@
+<div style="display:block; clear:both;"><p><font size="+4"><strong>W</strong></font>elcome to Chemical Reactions - This is the compound modeller from here you can define compounds for people to use in their soups. Your compound when you model it here and set and alias will allow for you and others to use it in defining soups that is a system of write-ups on chemical reactions you and others have done.</p>
+<{if !$xoops_isuser}>
+<p style="font:'Courier New', Courier, monospace; font-size:17px; color:#FF0000;">
+<em>YOU HAVE TO BE LOGGED IN TO USE THIS SERVICE - YOU MUST <a href="<{$xoops_url}>/register.php">REGISTER</a> OR <a href="<{$xoops_url}>/user.php">SIGN ON</a> TO THE <strong>CHEMICAL REACTION</strong></em>
+</p>
+<{/if}>
+<h1>Notice</h1>
+<ul>
+    <li>This uses a scored donation system.</li>
+    <li>The score is set to <strong><{$xoconfig.score}></strong>.</li>
+    <li>The donation amount is set to <em>(USD)</em> <strong>$ <{$xoconfig.paypalAmount}></strong>.</li>
+    <li>Donation email for chargeback and payback of the reaction is via ipn and paypal.</li>
+</ul>
+</div>
+<div style="clear:both; height:2em;">&nbsp;</div>
+<div style="display:block; clear:both;"><{$form.modeller}></div>
