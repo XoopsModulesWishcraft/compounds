@@ -19,7 +19,7 @@
  * @since           2.0.0
  * @author          Kazumi Ono <onokazu@Compounds.org>
  * @author          John Neill <catzwolf@Compounds.org>
- * @version         $Id: formCompound.php 3295 2009-07-01 02:26:05Z beckmi $
+ * @version         $Id$
  */
 defined('XOOPS_ROOT_PATH') or die('Restricted access');
 
